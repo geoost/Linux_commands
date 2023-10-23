@@ -1,4 +1,4 @@
-# SYSTEM INFORMATION
+# 1. SYSTEM INFORMATION
 ### Display Linux system information
     uname -a
 
@@ -32,7 +32,7 @@
     whoami
 
 
-# HARDWARE INFORMATION
+# 2. HARDWARE INFORMATION
 
 ### Display messages in kernel ring buffer
     dmesg
@@ -65,7 +65,7 @@
     badblocks -s /dev/sda
 
 
-# PERFORMANCE MONITORING AND STATISTICS
+# 3. PERFORMANCE MONITORING AND STATISTICS
 ### Display and manage the top processes
     top
 
@@ -103,7 +103,7 @@
     watch df -h
 
 
-# USER INFORMATION AND MANAGEMENT
+# 4. USER INFORMATION AND MANAGEMENT
 
 ### Display the user and group ids of your current user.
     id
@@ -129,7 +129,7 @@
 ### Add the john account to the sales group
     usermod -aG sales john
 
-# FILE AND DIRECTORY COMMANDS
+# 5. FILE AND DIRECTORY COMMANDS
 ### List all files in a long listing (detailed) format
     ls -al
 
@@ -182,7 +182,7 @@
     tail -f file
 
 
-# PROCESS MANAGEMENT
+# 6. PROCESS MANAGEMENT
 ### Display your currently running processes
     ps
 
@@ -218,7 +218,7 @@
 
 
 
-# FILE PERMISSIONS
+# 7. FILE PERMISSIONS
 
 <img src='https://github.com/geoost/Linux_commands/blob/main/images/linux-permissions-chart.png'>
 
@@ -230,7 +230,7 @@
         rw- rw- r--     chmod 664 filename
         rw- r-- r--     chmod 644 filename
 
-# NOTE: Use 777 
+### NOTE: Use 777 
 
         LEGEND
         U = User
@@ -244,7 +244,7 @@
 
 
 
-# NETWORKING
+# 8. NETWORKING
 
 ### Display all network interfaces and IP address
     ip a
@@ -288,7 +288,7 @@ or
     netstat -nutlp
 
 
-# ARCHIVES (TAR FILES)
+# 9. ARCHIVES (TAR FILES)
 ### Create tar named archive.tar containing directory.
     tar cf archive.tar directory
 
@@ -308,7 +308,7 @@ or
     tar xjf archive.tar.bz2
 
 
-# INSTALLING PACKAGES
+# 10. INSTALLING PACKAGES
 
 Use yum for rhel and apt for debian.
 
@@ -340,7 +340,7 @@ or
     make
     make install
 
-# SEARCH
+# 11. SEARCH
 
 ### Search for pattern in file
     grep pattern file
@@ -358,7 +358,7 @@ or
     find /home -size +100M
 
 
-# SSH LOGINS
+# 12. SSH LOGINS
 ### Connect to host as your local username.
     ssh host
 
@@ -368,7 +368,7 @@ or
 ### Connect to host using port
     ssh -p port user@host
 
-# FILE TRANSFERS
+# 13. FILE TRANSFERS
 
 ### Secure copy file.txt to the /tmp folder on server
     scp file.txt server:/tmp
@@ -386,7 +386,7 @@ or
     rsync -avz /home server:/backups/
 
 
-# DISK USAGE
+# 14. DISK USAGE
 
 ### Show free and used space on mounted filesystems
     df -h
@@ -404,7 +404,7 @@ or
     du -sh
 
 
-# DIRECTORY NAVIGATION
+# 15. DIRECTORY NAVIGATION
 
 ### To go up one level of the directory tree.  (Change into the parent directory.)
     cd ..
@@ -415,7 +415,7 @@ or
 ### Change to the /etc directory
     cd /etc
 
-# SECURITY
+# 16. SECURITY
 
 ### Change the current user's password.
     passwd
@@ -454,7 +454,7 @@ or
     SELINUX=disabled
 
 
-# LOGGING AND AUDITING
+# 17. LOGGING AND AUDITING
 ### Display messages in kernel ring buffer.
     dmesg
 
