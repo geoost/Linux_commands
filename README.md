@@ -1,4 +1,4 @@
-# Linux_commands. 
+# Linux_commands
 
 1. [SYSTEM INFORMATION](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#1-system-information)
 2. [HARDWARE INFORMATION](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#2-hardware-information) 
