@@ -1,7 +1,6 @@
 # Linux_commands. 
 
- 1.[SYSTEM INFORMATION](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#1-system-information)
-
+1. [SYSTEM INFORMATION](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#1-system-information)
 2. [HARDWARE INFORMATION](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#2-hardware-information) 
 3. [PERFORMANCE MONITORING AND STATISTICS](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#3-performance-monitoring-and-statistics)
 4. [USER INFORMATION AND MANAGEMENT](https://github.com/geoost/Linux_commands/blob/main/linux_commands.md#4-user-information-and-management)
