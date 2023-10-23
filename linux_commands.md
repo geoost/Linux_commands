@@ -218,7 +218,7 @@
 
 
 
-7 – FILE PERMISSIONS
+# FILE PERMISSIONS
 
 <img src='https://github.com/geoost/Linux_commands/blob/main/images/linux-permissions-chart.png'>
 
@@ -244,187 +244,222 @@
 
 
 
-8 – NETWORKING
-# Display all network interfaces and IP address
-ip a
+# NETWORKING
 
-# Display eth0 address and details
-ip addr show dev eth0
+### Display all network interfaces and IP address
+    ip a
 
-# Query or control network driver and hardware settings
-ethtool eth0
+### Display eth0 address and details
+    ip addr show dev eth0
+or
+    ifconfig
 
-# Send ICMP echo request to host
-ping host
+### Query or control network driver and hardware settings
+    ethtool eth0
 
-# Display whois information for domain
-whois domain
+### Send ICMP echo request to host
+    ping host
+or 
+    ping ip
 
-# Display DNS information for domain
-dig domain
 
-# Reverse lookup of IP_ADDRESS
-dig -x IP_ADDRESS
+### Display whois information for domain
+    whois domain
 
-# Display DNS IP address for domain
-host domain
+### Display DNS information for domain
+    dig domain
 
-# Display the network address of the host name.
-hostname -i
+### Reverse lookup of IP_ADDRESS    
+    dig -x IP_ADDRESS
 
-# Display all local IP addresses of the host.
-hostname -I
+### Display DNS IP address for domain
+    host domain
 
-# Download http://domain.com/file
-wget http://domain.com/file
+### Display the network address of the host name.
+    hostname -i
 
-# Display listening tcp and udp ports and corresponding programs
-netstat -nutlp
-9 – ARCHIVES (TAR FILES)
-# Create tar named archive.tar containing directory.
-tar cf archive.tar directory
+### Display all local IP addresses of the host.
+    hostname -I
 
-# Extract the contents from archive.tar.
-tar xf archive.tar
+### Download http://domain.com/file (To download a file using url link)
+    wget http://domain.com/file
 
-# Create a gzip compressed tar file name archive.tar.gz.
-tar czf archive.tar.gz directory
+### Display listening tcp and udp ports and corresponding programs
+    netstat -nutlp
 
-# Extract a gzip compressed tar file.
-tar xzf archive.tar.gz
 
-# Create a tar file with bzip2 compression
-tar cjf archive.tar.bz2 directory
+# ARCHIVES (TAR FILES)
+### Create tar named archive.tar containing directory.
+    tar cf archive.tar directory
 
-# Extract a bzip2 compressed tar file.
-tar xjf archive.tar.bz2
-10 – INSTALLING PACKAGES
-# Search for a package by keyword.
-yum search keyword
+### Extract the contents from archive.tar.
+    tar xf archive.tar
 
-# Install package.
-yum install package
+### Create a gzip compressed tar file name archive.tar.gz.
+    tar czf archive.tar.gz directory
 
-# Display description and summary information about package.
-yum info package
+### Extract a gzip compressed tar file.
+    tar xzf archive.tar.gz
 
-# Install package from local file named package.rpm
-rpm -i package.rpm
+### Create a tar file with bzip2 compression
+    tar cjf archive.tar.bz2 directory
 
-# Remove/uninstall package.
-yum remove package
+### Extract a bzip2 compressed tar file.
+    tar xjf archive.tar.bz2
 
-# Install software from source code.
-tar zxvf sourcecode.tar.gz
-cd sourcecode
-./configure
-make
-make install
-11 – SEARCH
-# Search for pattern in file
-grep pattern file
 
-# Search recursively for pattern in directory
-grep -r pattern directory
+# INSTALLING PACKAGES
 
-# Find files and directories by name
-locate name
+Use yum for rhel and apt for debian.
 
-# Find files in /home/john that start with "prefix".
-find /home/john -name 'prefix*'
+### Search for a package by keyword.
+    yum search keyword
+or 
+    apt search keyword
 
-# Find files larger than 100MB in /home
-find /home -size +100M
-12 – SSH LOGINS
-# Connect to host as your local username.
-ssh host
+### Install package.
+    yum install package
+or 
+    apt install package
 
-# Connect to host as user
-ssh user@host
+### Display description and summary information about package.
+    yum info package
+or
+    apt info package
 
-# Connect to host using port
-ssh -p port user@host
-13 – FILE TRANSFERS
-# Secure copy file.txt to the /tmp folder on server
-scp file.txt server:/tmp
+### Install package from local file named package.rpm
+    rpm -i package.rpm
 
-# Copy *.html files from server to the local /tmp folder.
-scp server:/var/www/*.html /tmp
+### Remove/uninstall package.
+    yum remove package
 
-# Copy all files and directories recursively from server to the current system's /tmp folder.
-scp -r server:/var/www /tmp
+### Install software from source code.
+    tar zxvf sourcecode.tar.gz
+    cd sourcecode
+    ./configure
+    make
+    make install
 
-# Synchronize /home to /backups/home
-rsync -a /home /backups/
+# SEARCH
 
-# Synchronize files/directories between the local and remote system with compression enabled
-rsync -avz /home server:/backups/
-14 – DISK USAGE
-# Show free and used space on mounted filesystems
-df -h
+### Search for pattern in file
+    grep pattern file
 
-# Show free and used inodes on mounted filesystems
-df -i
+### Search recursively for pattern in directory
+    grep -r pattern directory
 
-# Display disks partitions sizes and types
-fdisk -l
+### Find files and directories by name
+    locate name
 
-# Display disk usage for all files and directories in human readable format
-du -ah
+### Find files in /home/john that start with "prefix".
+    find /home/john -name 'prefix*'
 
-# Display total disk usage off the current directory
-du -sh
-15 – DIRECTORY NAVIGATION
-# To go up one level of the directory tree.  (Change into the parent directory.)
-cd ..
+### Find files larger than 100MB in /home
+    find /home -size +100M
 
-# Go to the $HOME directory
-cd
 
-# Change to the /etc directory
-cd /etc
-16 – SECURITY
-# Change the current user's password.
-passwd
+# SSH LOGINS
+### Connect to host as your local username.
+    ssh host
 
-# Switch to the root account with root's environment. (Login shell.)
-sudo -i
+### Connect to host as user
+    ssh user@host
 
-# Execute your current shell as root. (Non-login shell.)
-sudo -s
+### Connect to host using port
+    ssh -p port user@host
 
-# List sudo privileges for the current user.
-sudo -l
+# FILE TRANSFERS
 
-# Edit the sudoers configuration file.
-visudo
+### Secure copy file.txt to the /tmp folder on server
+    scp file.txt server:/tmp
 
-# Display the current SELinux mode.
-getenforce
+### Copy *.html files from server to the local /tmp folder.
+    scp server:/var/www/*.html /tmp
 
-# Display SELinux details such as the current SELinux mode, the configured mode, and the loaded policy.
-sestatus
+### Copy all files and directories recursively from server to the current system's /tmp folder.
+    scp -r server:/var/www /tmp
 
-# Change the current SELinux mode to Permissive. (Does not survive a reboot.)
-setenforce 0
+### Synchronize /home to /backups/home
+    rsync -a /home /backups/
 
-# Change the current SELinux mode to Enforcing. (Does not survive a reboot.)
-setenforce 1
+### Synchronize files/directories between the local and remote system with compression enabled
+    rsync -avz /home server:/backups/
 
-# Set the SELinux mode to enforcing on boot by using this setting in the /etc/selinux/config file.
-SELINUX=enforcing
 
-# Set the SELinux mode to permissive on boot by using this setting in the /etc/selinux/config file.
-SELINUX=permissive
+# DISK USAGE
 
-# Set the SELinux mode to disabled on boot by using this setting in the /etc/selinux/config file.
-SELINUX=disabled
-17 – LOGGING AND AUDITING
-# Display messages in kernel ring buffer.
-dmesg
+### Show free and used space on mounted filesystems
+    df -h
 
-# Display logs stored in the systemd journal.
-journalctl
+### Show free and used inodes on mounted filesystems
+    df -i
 
-# Display logs for a specific unit (service).
-journalctl -u servicename
+### Display disks partitions sizes and types
+    fdisk -l
+
+### Display disk usage for all files and directories in human readable format
+    du -ah
+
+### Display total disk usage off the current directory
+    du -sh
+
+
+# DIRECTORY NAVIGATION
+
+### To go up one level of the directory tree.  (Change into the parent directory.)
+    cd ..
+
+### Go to the $HOME directory
+    cd
+
+### Change to the /etc directory
+    cd /etc
+
+# SECURITY
+
+### Change the current user's password.
+    passwd
+
+### Switch to the root account with root's environment. (Login shell.)
+    sudo -i
+
+### Execute your current shell as root. (Non-login shell.)
+    sudo -s
+
+### List sudo privileges for the current user.
+    sudo -l
+
+### Edit the sudoers configuration file.
+    visudo
+
+### Display the current SELinux mode.
+    getenforce
+
+### Display SELinux details such as the current SELinux mode, the configured mode, and the loaded policy.
+    sestatus
+
+### Change the current SELinux mode to Permissive. (Does not survive a reboot.)
+    setenforce 0
+
+### Change the current SELinux mode to Enforcing. (Does not survive a reboot.)
+    setenforce 1
+
+### Set the SELinux mode to enforcing on boot by using this setting in the /etc/selinux/config file.
+    SELINUX=enforcing
+
+### Set the SELinux mode to permissive on boot by using this setting in the /etc/selinux/config file.
+    SELINUX=permissive
+
+### Set the SELinux mode to disabled on boot by using this setting in the /etc/selinux/config file.
+    SELINUX=disabled
+
+
+# LOGGING AND AUDITING
+### Display messages in kernel ring buffer.
+    dmesg
+
+### Display logs stored in the systemd journal.
+    journalctl
+
+### Display logs for a specific unit (service).
+    journalctl -u servicename
